@@ -15,7 +15,7 @@ public class LevelManager : MonoBehaviour {
 
 	// The SwitchController
 	public SwitchController theSwitch;
-
+    //this is a test to make sure this is saving to github
     private void Awake()
     {
         instance = this;
