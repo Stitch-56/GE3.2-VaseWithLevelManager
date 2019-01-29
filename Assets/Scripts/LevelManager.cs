@@ -21,12 +21,14 @@ public class LevelManager : MonoBehaviour {
         instance = this;
     }
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
 	
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 	
 	}
 
@@ -34,15 +36,16 @@ public class LevelManager : MonoBehaviour {
     // script that I have attached to the Hero GameObject). You are going to have to write the code that
     // goes into this function that will (a) if the switch is enabled will turn it on if it is off and
     // push the Vase off the ledge and (b) if the switch is enabled will turn it off if it is on.
-	public void flipTheSwitch() {
-		
+	public void flipTheSwitch()
+    {
+        
 	}
 
     // The following two functions get called by the SwitchController object when the Hero enters the 
     // trigger box of the Switch. You need to write the code that goes into these functions.
     public void onSwitchTriggerEnter(Collider2D other)
     {
-
+        
     }
 
     public void onSwitchTriggerExit(Collider2D other)
