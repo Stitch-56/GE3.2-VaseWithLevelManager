@@ -7,14 +7,18 @@ public class LevelManager : MonoBehaviour {
     // needs to to access the one and only LevelManager object by going LevelManager.instance.
     public static LevelManager instance;
 
-	// Okay, what objects does the LevelManager need to be connected to. I'll start you off
+    public Rigidbody2D theRigidBody;
+
+    public Vector2 forceToApply;
+
+    // Okay, what objects does the LevelManager need to be connected to. I'll start you off
     // and say the LevelManager needs to be connected to the SwitchController script on the
     // Switch game object so that it can call the turnOn() and turnOff() functions on it when
     // the user presses the spacebar AND the switch is enabled (which is done by moving the
     // Hero beside the Switch).
 
-	// The SwitchController
-	public SwitchController theSwitch;
+    // The SwitchController
+    public SwitchController theSwitch;
     //this is a test to make sure this is saving to github
     private void Awake()
     {
@@ -38,7 +42,15 @@ public class LevelManager : MonoBehaviour {
     // push the Vase off the ledge and (b) if the switch is enabled will turn it off if it is on.
 	public void flipTheSwitch()
     {
-        
+        if (theSwitch.turnOff = true);
+        {
+            theSwitch.turnOff = false;
+            theRigidBody.AddForce(forceToApply, ForceMode2D.Impulse);
+        }
+        else if (theSwitch.turnOff = false)
+        {
+            theSwitch.turnOff = true;
+        }
 	}
 
     // The following two functions get called by the SwitchController object when the Hero enters the 
